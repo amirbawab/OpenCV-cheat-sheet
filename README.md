@@ -315,6 +315,9 @@ Convert image to grayscale
 cvtColor(imageSrc, imageDest, CV_BGR2GRAY);
 ```
 
+#### Examples  
+* [examples/colors/](examples/colors)
+
 #### Reference:  
 * http://docs.opencv.org/2.4/modules/imgproc/doc/miscellaneous_transformations.html#cvtcolor
 
