@@ -156,6 +156,12 @@ Clone image
 image.clone();
 ```
 
+Rotate image
+```
+Mat matRotate = getRotationMatrix2D(Point(imageSrc.rows/2, imageSrc.cols/2) /*center*/, 180 /*angle*/, 1 /*scale*/);
+warpAffine(imageSrc, imageDest, matRotate, imageSrc.size() /*new size*/);
+```
+
 #### Examples  
 * [examples/image/](examples/image)
 
