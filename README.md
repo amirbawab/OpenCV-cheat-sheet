@@ -193,12 +193,12 @@ resize(imageSrc, imageDest, Size(imageSrc.rows/2, imageSrc.cols/2)); // Resize t
 Loop on all pixels for a matrix
 ```
 for( int row = 0; row < imageSrc.rows; row++ ){
-		for( int col = 0; col < imageSrc.cols; col++ ){
-			for( int c = 0; c < imageSrc.channels(); c++ ) {
-				// image.at<Vec3b>(row,col)[c] = ...;
-			}
+	for( int col = 0; col < imageSrc.cols; col++ ){
+		for( int c = 0; c < imageSrc.channels(); c++ ) {
+			// image.at<Vec3b>(row,col)[c] = ...;
 		}
 	}
+}
 ```
 
 ---
