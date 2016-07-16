@@ -92,6 +92,11 @@ Load and store image in a matrix
 Mat image = imread("img.jpg", CV_LOAD_IMAGE_COLOR);
 ```
 
+Save image from matrix to file
+```
+imwrite( "img.jpg", mat);
+```
+
 Show image
 ```
 // Create a named window
