@@ -162,6 +162,11 @@ Mat matRotate = getRotationMatrix2D(Point(imageSrc.rows/2, imageSrc.cols/2) /*ce
 warpAffine(imageSrc, imageDest, matRotate, imageSrc.size() /*new size*/);
 ```
 
+Save part of an image in a new matrix
+```
+Mat imageDest = imageSrc(Rect(0, 0, 100, 100));  // Mat::operator() overloaded
+```
+
 #### Examples  
 * [examples/image/](examples/image)
 
