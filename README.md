@@ -8,6 +8,7 @@
   * [Eclipse](#eclipse)
   * [Window](#window)
   * [Image](#image)
+  * [Blur](#blur)
 
   
 ### Version
@@ -142,7 +143,7 @@ Mat image = imread("img.jpg", CV_LOAD_IMAGE_COLOR);
 
 Save image from matrix to file
 ```
-imwrite( "img.jpg", mat);
+imwrite( "img.jpg", image);
 ```
 
 Show image
@@ -162,4 +163,50 @@ image.clone();
 * http://docs.opencv.org/2.4/modules/highgui/doc/reading_and_writing_images_and_video.html?highlight=imread#imread
 * http://docs.opencv.org/2.4/modules/highgui/doc/user_interface.html
 
+---
+
+### Blur
+
+#### Algorithms
+
+Normalized Block Filter
+```
+int kernelSize=20;
+blur( imageSrc, imageDest, Size(kernelSize, kernelSize), Point(-1,-1));
+```
+
+Gaussian Filter
+```
+int kernelSize=21; // Int: Positive & Odd
+GaussianBlur( imageSrc, imageDest, Size(kernelSize, kernelSize), 0, 0);
+```
+
+Median Filter
+```
+int kernelSize=21; // Int: Odd
+medianBlur(imageSrc, imageDest, kernelSize);
+```
+
+#### Other
+
+Blur part of the image
+```
+Rect region(0 /*x*/, 0 /*y*/, 200 /*width*/, 200 /*height*/);
+int kernelSize = 25;
+GaussianBlur(imageSrc(region), imageDest(region), Size(kernelSize,kernelSize), 0, 0); // Mat::operator() overloaded
+```
+
+Save only the blurred region in a matrix
+```
+Rect region(0 /*x*/, 0 /*y*/, 200 /*width*/, 200 /*height*/);
+int kernelSize = 25;
+Mat imageDest;
+GaussianBlur(imageSrc(region), imageDest, Size(kernelSize,kernelSize), 0, 0); // Mat::operator() overloaded
+```
+
+#### Examples  
+* [examples/image/](examples/blur)
+
+#### Reference:  
+* http://docs.opencv.org/2.4.13/doc/tutorials/imgproc/gausian_median_blur_bilateral_filter/gausian_median_blur_bilateral_filter.html#goal
 ---
