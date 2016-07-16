@@ -150,6 +150,11 @@ Show image
 imshow("My Image", image);
 ```
 
+Clone image
+```
+image.clone();
+```
+
 #### Examples  
 * [examples/image/](examples/image)
 
