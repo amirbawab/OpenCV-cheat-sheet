@@ -11,6 +11,8 @@
   * [Pixel](#pixel)
   * [Blur](#blur)
   * [Contrast and Brightness](#contrast-and-brightness)
+  * [Colors](#colors)
+  * [Channles](#channels)
 
   
 ### Version
@@ -271,11 +273,11 @@ int beta = 100;
 for( int row = 0; row < imageSrc.rows; row++ ){
 	for( int col = 0; col < imageSrc.cols; col++ ){
 
-		// Loop on channels (0: Red, 1: Green, 2: Blue)
+		// Loop on channels (0: Blue, 1: Green, 2: Red)
 		for( int c = 0; c < imageSrc.channels(); c++ ) {
 			
 			// g(row, col) = alpha * f(row, col) + beta
-			image.at<Vec3b>(row,col)[c] = saturate_cast<uchar>(alpha *( imageSrc.at<Vec3b>(row,col)[c] ) + beta);
+			imageDest.at<Vec3b>(row,col)[c] = saturate_cast<uchar>(alpha *( imageSrc.at<Vec3b>(row,col)[c] ) + beta);
 		}
 	}
 }
@@ -291,9 +293,50 @@ int beta = 100;
 imageSrc.convertTo(imageDest, imageSrc.type(), alpha, beta);
 ```
 
+Brightness can also be increased using `Scalar`
+```
+Mat imageDest = imageSrc + Scalar(80, 80, 80); // Add to each channel for all pixels of a matrix the amount specified in the arguments
+```
+
+#### Examples  
+* [examples/contrast_and_brightness/](examples/contrast_and_brightness)
+
 #### Reference:  
 * http://docs.opencv.org/2.4/doc/tutorials/core/basic_linear_transform/basic_linear_transform.html
 * http://docs.opencv.org/2.4/modules/core/doc/utility_and_system_functions_and_macros.html?highlight=saturate_cast#saturate-cast
 * http://docs.opencv.org/2.4/modules/core/doc/basic_structures.html#mat-convertto
+
+---
+
+### Colors
+
+Convert image to grayscale
+```
+cvtColor(imageSrc, imageDest, CV_BGR2GRAY);
+```
+
+#### Reference:  
+* http://docs.opencv.org/2.4/modules/imgproc/doc/miscellaneous_transformations.html#cvtcolor
+
+---
+
+### Channels
+
+Split multi-channel array into several single-channel arrays
+```
+vector<Mat> bgr;
+split(imageSrc, bgr);
+```
+
+Merge several single-channel into one multichannel array
+```
+merge(bgr /*vector<Mat> bgr*/, imageDest);
+```
+
+#### Examples  
+* [examples/channels/](examples/channels)
+
+#### Reference:  
+* http://docs.opencv.org/2.4/modules/core/doc/operations_on_arrays.html
 
 ---

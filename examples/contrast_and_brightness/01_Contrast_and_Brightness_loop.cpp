@@ -25,7 +25,7 @@ int main( int argc, char** argv ) {
 	for( int row = 0; row < imageSrc.rows; row++ ){
 	    for( int col = 0; col < imageSrc.cols; col++ ){
 
-	        // Loop on channels (0: Red, 1: Green, 2: Blue)
+	        // Loop on channels (0: Blue, 1: Green, 2: Red)
 	        for( int c = 0; c < imageSrc.channels(); c++ ) {
 
 	            // g(row, col) = alpha * f(row, col) + beta
