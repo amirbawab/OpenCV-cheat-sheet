@@ -209,4 +209,5 @@ GaussianBlur(imageSrc(region), imageDest, Size(kernelSize,kernelSize), 0, 0); //
 
 #### Reference:  
 * http://docs.opencv.org/2.4.13/doc/tutorials/imgproc/gausian_median_blur_bilateral_filter/gausian_median_blur_bilateral_filter.html#goal
+
 ---
