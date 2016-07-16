@@ -8,6 +8,7 @@
   * [Eclipse](#eclipse)
   * [Window](#window)
   * [Image](#image)
+  * [Pixel](#pixel)
   * [Blur](#blur)
 
   
@@ -178,6 +179,21 @@ Mat imageDest = imageSrc(Rect(0, 0, 100, 100));  // Mat::operator() overloaded
 #### Reference:  
 * http://docs.opencv.org/2.4/modules/highgui/doc/reading_and_writing_images_and_video.html?highlight=imread#imread
 * http://docs.opencv.org/2.4/modules/highgui/doc/user_interface.html
+
+---
+
+### Pixel
+
+Loop on all pixels for a matrix
+```
+for( int row = 0; row < imageSrc.rows; row++ ){
+		for( int col = 0; col < imageSrc.cols; col++ ){
+			for( int c = 0; c < imageSrc.channels(); c++ ) {
+				// image.at<Vec3b>(row,col)[c] = ...;
+			}
+		}
+	}
+```
 
 ---
 
