@@ -9,12 +9,12 @@
   * [Image](#image)
   
   
-#### Version
+### Version
 * OpenCV 2.4
   
-#### Installation
+### Installation
 
-##### Ubuntu
+#### Ubuntu
 
 * **Required**
 ```
@@ -45,7 +45,9 @@ sudo make install
 Reference:  
 http://docs.opencv.org/2.4/doc/tutorials/introduction/linux_install/linux_install.html#linux-installation
 
-#### Eclipse
+---
+
+### Eclipse
 
 * Project > Properties > C/C++ Build [Menu] > Tool Settings [Tab] > GCC C++ Compiler [Option] > Includes [Option] > Include paths (-I)  
 
@@ -81,7 +83,9 @@ opencv_flann
 Reference:  
 http://docs.opencv.org/2.4/doc/tutorials/introduction/linux_eclipse/linux_eclipse.html
 
-#### Image
+---
+
+### Image
 
 Load and store image in a matrix
 ```
@@ -104,5 +108,7 @@ Reference:
 * http://docs.opencv.org/2.4/modules/highgui/doc/reading_and_writing_images_and_video.html?highlight=imread#imread
 * http://docs.opencv.org/2.4/modules/highgui/doc/user_interface.html
 
-##### Examples  
+#### Examples  
 https://github.com/amirbawab/OpenCV-Cheat-Sheet/blob/master/examples/image
+
+---
