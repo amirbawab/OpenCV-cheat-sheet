@@ -109,6 +109,6 @@ Reference:
 * http://docs.opencv.org/2.4/modules/highgui/doc/user_interface.html
 
 #### Examples  
-https://github.com/amirbawab/OpenCV-Cheat-Sheet/blob/master/examples/image
+* [examples/image/](examples/image)
 
 ---
