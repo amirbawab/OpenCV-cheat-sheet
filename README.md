@@ -125,6 +125,9 @@ Wait instead of terminating the program
 waitKey(0);
 ```
 
+#### Examples  
+* [examples/window/](examples/window)
+
 ---
 
 ### Image
