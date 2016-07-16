@@ -11,7 +11,8 @@
   * [Pixel](#pixel)
   * [Blur](#blur)
   * [Contrast and Brightness](#contrast-and-brightness)
-  * [Color](#color)
+  * [Colors](#colors)
+  * [Channles](#channels)
 
   
 ### Version
@@ -307,7 +308,7 @@ Mat imageDest = imageSrc + Scalar(80, 80, 80); // Add to each channel for all pi
 
 ---
 
-### Color
+### Colors
 
 Convert image to grayscale
 ```
@@ -316,5 +317,23 @@ cvtColor(imageSrc, imageDest, CV_BGR2GRAY);
 
 #### Reference:  
 * http://docs.opencv.org/2.4/modules/imgproc/doc/miscellaneous_transformations.html#cvtcolor
+
+---
+
+### Channels
+
+Split multi-channel array into several single-channel arrays
+```
+vector<Mat> bgr;
+split(imageSrc, bgr);
+```
+
+Merge several single-channel into one multichannel array
+```
+merge(bgr /*vector<Mat> bgr*/, imageDest);
+```
+
+#### Reference:  
+* http://docs.opencv.org/2.4/modules/core/doc/operations_on_arrays.html#split
 
 ---
