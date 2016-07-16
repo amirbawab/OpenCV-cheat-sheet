@@ -333,6 +333,9 @@ Merge several single-channel into one multichannel array
 merge(bgr /*vector<Mat> bgr*/, imageDest);
 ```
 
+#### Examples  
+* [examples/channels/](examples/channels)
+
 #### Reference:  
 * http://docs.opencv.org/2.4/modules/core/doc/operations_on_arrays.html
 
