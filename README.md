@@ -82,7 +82,7 @@ opencv_flann
 ```
 
 #### Reference:  
-http://docs.opencv.org/2.4/doc/tutorials/introduction/linux_eclipse/linux_eclipse.html
+* http://docs.opencv.org/2.4/doc/tutorials/introduction/linux_eclipse/linux_eclipse.html
 
 ---
 
@@ -130,6 +130,7 @@ waitKey(0);
 
 #### Reference:  
 * http://docs.opencv.org/2.4/modules/highgui/doc/user_interface.html
+
 ---
 
 ### Image
