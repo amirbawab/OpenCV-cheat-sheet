@@ -113,6 +113,13 @@ Resize window
 resizeWindow("My window", 500 /*width*/, 500 /*height*/);
 ```
 
+Set mouse call back
+```
+setMouseCallback("My Image", [](int event, int x, int y, int flags, void* userdata) {
+ cout << "X: " << x << ", Y: " << y << endl;
+}, 0);
+```
+
 Wait instead of terminating the program
 ```
 waitKey(0);
