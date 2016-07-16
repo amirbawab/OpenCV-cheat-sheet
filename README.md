@@ -10,7 +10,7 @@
   * [Image](#image)
   * [Pixel](#pixel)
   * [Blur](#blur)
-  * [Contrast and Brightness]()
+  * [Contrast and Brightness](#contrast-and-brightness)
 
   
 ### Version
