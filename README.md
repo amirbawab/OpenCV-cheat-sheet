@@ -293,7 +293,7 @@ imageSrc.convertTo(imageDest, imageSrc.type(), alpha, beta);
 
 Brightness can also be increased using `Scalar`
 ```
-Mat imageDest = imageSrc + Scalar(80, 50, 15); // Add to each channel for all pixels of a matrix the amount specified in the arguments
+Mat imageDest = imageSrc + Scalar(80, 80, 80); // Add to each channel for all pixels of a matrix the amount specified in the arguments
 ```
 
 #### Examples  
