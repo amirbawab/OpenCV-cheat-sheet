@@ -151,6 +151,11 @@ Show image
 imshow("My Image", image);
 ```
 
+Create a matrix of zeros
+```
+Mat new_image = Mat::zeros( image.size(), image.type() );
+```
+
 Clone image
 ```
 image.clone();
