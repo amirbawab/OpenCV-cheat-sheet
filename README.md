@@ -102,7 +102,7 @@ Parameters for `imread()`:
     * < 0 Return the loaded image as is (with alpha channel).
 
 Reference:  
-http://docs.opencv.org/2.4/modules/highgui/doc/user_interface.html
+http://docs.opencv.org/2.4/modules/highgui/doc/reading_and_writing_images_and_video.html?highlight=imread#imread
 
 Show image
 ```
