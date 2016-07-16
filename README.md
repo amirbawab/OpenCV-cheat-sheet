@@ -271,11 +271,11 @@ int beta = 100;
 for( int row = 0; row < imageSrc.rows; row++ ){
 	for( int col = 0; col < imageSrc.cols; col++ ){
 
-		// Loop on channels (0: Red, 1: Green, 2: Blue)
+		// Loop on channels (0: Blue, 1: Green, 2: Red)
 		for( int c = 0; c < imageSrc.channels(); c++ ) {
 			
 			// g(row, col) = alpha * f(row, col) + beta
-			image.at<Vec3b>(row,col)[c] = saturate_cast<uchar>(alpha *( imageSrc.at<Vec3b>(row,col)[c] ) + beta);
+			imageDest.at<Vec3b>(row,col)[c] = saturate_cast<uchar>(alpha *( imageSrc.at<Vec3b>(row,col)[c] ) + beta);
 		}
 	}
 }
