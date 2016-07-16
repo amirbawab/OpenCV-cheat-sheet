@@ -87,22 +87,6 @@ Load and store image in a matrix
 ```
 Mat image = imread("img.jpg", CV_LOAD_IMAGE_COLOR);
 ```
-Parameters for `imread()`:	
-
-* **filename**  
-  Name of file to be loaded.
-
-* **flags**
-
-    * CV_LOAD_IMAGE_ANYDEPTH - If set, return 16-bit/32-bit image when the input has the corresponding depth, otherwise convert it to 8-bit.
-    * CV_LOAD_IMAGE_COLOR - If set, always convert image to the color one
-    * CV_LOAD_IMAGE_GRAYSCALE - If set, always convert image to the grayscale one
-    * > 0 Return a 3-channel color image.
-    * = 0 Return a grayscale image.
-    * < 0 Return the loaded image as is (with alpha channel).
-
-Reference:  
-http://docs.opencv.org/2.4/modules/highgui/doc/reading_and_writing_images_and_video.html?highlight=imread#imread
 
 Show image
 ```
@@ -116,19 +100,9 @@ imshow("My Image", image);
 waitKey(0);
 ```
 
-Parameters for `namedWindow()`:	
-
-* **name**  
-  Name of the window (key).
-
-* **flags**
-
-    * WINDOW_NORMAL If this is set, the user can resize the window (no constraint).
-    * WINDOW_AUTOSIZE If this is set, the window size is automatically adjusted to fit the displayed image (see imshow() ), and you cannot change the window size manually.
-    * WINDOW_OPENGL If this is set, the window will be created with OpenGL support.
-
 Reference:  
-http://docs.opencv.org/2.4/modules/highgui/doc/user_interface.html
+* http://docs.opencv.org/2.4/modules/highgui/doc/reading_and_writing_images_and_video.html?highlight=imread#imread
+* http://docs.opencv.org/2.4/modules/highgui/doc/user_interface.html
 
 ##### Examples  
 https://github.com/amirbawab/OpenCV-Cheat-Sheet/blob/master/examples/image
