@@ -322,7 +322,8 @@ cvtColor(imageSrc, imageDest, CV_BGR2GRAY);
 
 ### Channels
 
-Split multi-channel array into several single-channel arrays
+Split multi-channel array into several single-channel arrays  
+*Note: matrices created have one channel each*
 ```
 vector<Mat> bgr;
 split(imageSrc, bgr);
