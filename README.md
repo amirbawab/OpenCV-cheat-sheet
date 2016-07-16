@@ -113,6 +113,11 @@ Resize window
 resizeWindow("My window", 500 /*width*/, 500 /*height*/);
 ```
 
+Wait instead of terminating the program
+```
+waitKey(0);
+```
+
 ---
 
 ### Image
