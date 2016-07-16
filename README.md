@@ -322,6 +322,11 @@ cvtColor(imageSrc, imageDest, CV_BGR2GRAY);
 
 ### Channels
 
+Get the number of channels for a matrix
+```
+image.channels();
+```
+
 Split multi-channel array into several single-channel arrays  
 *Note: matrices created have one channel each*
 ```
