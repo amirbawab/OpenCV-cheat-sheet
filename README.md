@@ -174,6 +174,11 @@ Save part of an image in a new matrix
 Mat imageDest = imageSrc(Rect(0, 0, 100, 100));  // Mat::operator() overloaded
 ```
 
+Resize image
+```
+resize(imageSrc, imageDest, Size(imageSrc.rows/2, imageSrc.cols/2)); // Resize to width=50% and height=50%
+```
+
 #### Examples  
 * [examples/image/](examples/image)
 
