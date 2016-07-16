@@ -10,6 +10,7 @@
   * [Image](#image)
   * [Pixel](#pixel)
   * [Blur](#blur)
+  * [Contrast and Brightness]()
 
   
 ### Version
@@ -241,5 +242,53 @@ GaussianBlur(imageSrc(region), imageDest, Size(kernelSize,kernelSize), 0, 0); //
 
 #### Reference:  
 * http://docs.opencv.org/2.4.13/doc/tutorials/imgproc/gausian_median_blur_bilateral_filter/gausian_median_blur_bilateral_filter.html#goal
+
+---
+
+### Contrast and Brightness
+
+#### Information
+
+Contrast and brightness can be controlled by the following formula:  `g(row, col) = alpha * f(row, col) + beta`, where:
+* `g(row, col)` is the result pixel value
+* `f(row, col)` is the original pixel value
+* `alpha` controls the contrast
+* `beta` controls the brightness
+
+#### Manually
+
+Using nested loops
+```
+double alpha = 1;
+int beta = 100;
+
+// Loop on matrix
+for( int row = 0; row < imageSrc.rows; row++ ){
+	for( int col = 0; col < imageSrc.cols; col++ ){
+
+		// Loop on channels (0: Red, 1: Green, 2: Blue)
+		for( int c = 0; c < imageSrc.channels(); c++ ) {
+			
+			// g(row, col) = alpha * f(row, col) + beta
+			image.at<Vec3b>(row,col)[c] = saturate_cast<uchar>(alpha *( imageSrc.at<Vec3b>(row,col)[c] ) + beta);
+		}
+	}
+}
+```
+*saturate_cast<uchar>: Template function for accurate conversion from one primitive type to another.*
+
+#### Automatically
+
+Using `Mat::convertTo()` which applies the same formula `g(row, col)` explained above
+```
+double alpha = 1;
+int beta = 100;
+imageSrc.convertTo(imageDest, imageSrc.type(), alpha, beta);
+```
+
+#### Reference:  
+* http://docs.opencv.org/2.4/doc/tutorials/core/basic_linear_transform/basic_linear_transform.html
+* http://docs.opencv.org/2.4/modules/core/doc/utility_and_system_functions_and_macros.html?highlight=saturate_cast#saturate-cast
+* http://docs.opencv.org/2.4/modules/core/doc/basic_structures.html#mat-convertto
 
 ---
