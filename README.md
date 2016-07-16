@@ -16,13 +16,13 @@
 
 ##### Ubuntu
 
-1. **Required**
+* **Required**
 ```
 sudo apt-get install build-essential
 sudo apt-get install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev
 ```
 
-2. Download OpenCV
+* Download OpenCV
 
 ```
 wget https://github.com/Itseez/opencv/archive/2.4.13.zip 
@@ -32,7 +32,7 @@ cd /tmp/OpenCV
 unzip opencv-2.4.13.zip
 ```
   
-3. Make OpenCV 
+* Make OpenCV 
 ```
 cd opencv-2.4.13
 mkdir release
@@ -41,6 +41,9 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local ..
 make
 sudo make install
 ```
+
+Reference:  
+http://docs.opencv.org/2.4/doc/tutorials/introduction/linux_install/linux_install.html#linux-installation
 
 #### Eclipse
 
@@ -80,3 +83,33 @@ http://docs.opencv.org/2.4/doc/tutorials/introduction/linux_eclipse/linux_eclips
 
 #### Image
 
+Load and store image in a matrix
+```
+Mat image = imread("img.jpg", CV_LOAD_IMAGE_COLOR);
+```
+
+Parameters:	
+
+* **name**  
+  Name of the window (key).
+
+* **flags**
+
+    * WINDOW_NORMAL If this is set, the user can resize the window (no constraint).
+    * WINDOW_AUTOSIZE If this is set, the window size is automatically adjusted to fit the displayed image (see imshow() ), and you cannot change the window size manually.
+    * WINDOW_OPENGL If this is set, the window will be created with OpenGL support.
+
+Reference:  
+http://docs.opencv.org/2.4/modules/highgui/doc/user_interface.html
+
+Show image
+```
+// Create a named window
+namedWindow("My Image", WINDOW_AUTOSIZE);
+
+// Displays image in the named window
+imshow("My Image", image);
+
+// Wait for key press to avoid terminating the program
+waitKey(0);
+```
