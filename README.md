@@ -290,6 +290,12 @@ double alpha = 1;
 int beta = 100;
 imageSrc.convertTo(imageDest, imageSrc.type(), alpha, beta);
 ```
+
+Brightness can also be increased using `Scalar`
+```
+Mat imageDest = imageSrc + Scalar(80, 50, 15); // Add to each channel for all pixels of a matrix the amount specified in the arguments
+```
+
 #### Examples  
 * [examples/contrast_and_brightness/](examples/contrast_and_brightness)
 
