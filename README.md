@@ -290,6 +290,8 @@ double alpha = 1;
 int beta = 100;
 imageSrc.convertTo(imageDest, imageSrc.type(), alpha, beta);
 ```
+#### Examples  
+* [examples/contrast_and_brightness/](examples/contrast_and_brightness)
 
 #### Reference:  
 * http://docs.opencv.org/2.4/doc/tutorials/core/basic_linear_transform/basic_linear_transform.html
