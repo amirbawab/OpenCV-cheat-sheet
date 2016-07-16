@@ -11,6 +11,7 @@
   * [Pixel](#pixel)
   * [Blur](#blur)
   * [Contrast and Brightness](#contrast-and-brightness)
+  * [Color](#color)
 
   
 ### Version
@@ -303,5 +304,17 @@ Mat imageDest = imageSrc + Scalar(80, 80, 80); // Add to each channel for all pi
 * http://docs.opencv.org/2.4/doc/tutorials/core/basic_linear_transform/basic_linear_transform.html
 * http://docs.opencv.org/2.4/modules/core/doc/utility_and_system_functions_and_macros.html?highlight=saturate_cast#saturate-cast
 * http://docs.opencv.org/2.4/modules/core/doc/basic_structures.html#mat-convertto
+
+---
+
+### Color
+
+Convert image to grayscale
+```
+cvtColor(imageSrc, imageDest, CV_BGR2GRAY);
+```
+
+#### Reference:  
+* http://docs.opencv.org/2.4/modules/imgproc/doc/miscellaneous_transformations.html#cvtcolor
 
 ---
