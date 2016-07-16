@@ -6,8 +6,9 @@
   * [Version](#version)
   * [Installation](#installation)
   * [Eclipse](#eclipse)
+  * [Window](#window)
   * [Image](#image)
-  
+
   
 ### Version
 * OpenCV 2.4
@@ -85,6 +86,35 @@ http://docs.opencv.org/2.4/doc/tutorials/introduction/linux_eclipse/linux_eclips
 
 ---
 
+### Window
+
+Create window
+```
+namedWindow("My window", WINDOW_AUTOSIZE);
+```
+
+Destroy window
+```
+destroyWindow("My window");
+```
+
+Destroy all windows
+```
+destroyAllWindows();
+```
+
+Move window
+```
+moveWindow("My window", 150 /*x*/, 160 /*y*/);
+```
+
+Resize window
+```
+resizeWindow("My window", 500 /*width*/, 500 /*height*/);
+```
+
+---
+
 ### Image
 
 Load and store image in a matrix
@@ -99,14 +129,7 @@ imwrite( "img.jpg", mat);
 
 Show image
 ```
-// Create a named window
-namedWindow("My Image", WINDOW_AUTOSIZE);
-
-// Displays image in the named window
 imshow("My Image", image);
-
-// Wait for key press to avoid terminating the program
-waitKey(0);
 ```
 
 Reference:  
