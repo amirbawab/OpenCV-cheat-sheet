@@ -43,7 +43,7 @@ make
 sudo make install
 ```
 
-Reference:  
+#### Reference:  
 http://docs.opencv.org/2.4/doc/tutorials/introduction/linux_install/linux_install.html#linux-installation
 
 ---
@@ -81,7 +81,7 @@ opencv_flann
 /usr/local/lib
 ```
 
-Reference:  
+#### Reference:  
 http://docs.opencv.org/2.4/doc/tutorials/introduction/linux_eclipse/linux_eclipse.html
 
 ---
@@ -128,6 +128,8 @@ waitKey(0);
 #### Examples  
 * [examples/window/](examples/window)
 
+#### Reference:  
+* http://docs.opencv.org/2.4/modules/highgui/doc/user_interface.html
 ---
 
 ### Image
@@ -147,11 +149,11 @@ Show image
 imshow("My Image", image);
 ```
 
-Reference:  
-* http://docs.opencv.org/2.4/modules/highgui/doc/reading_and_writing_images_and_video.html?highlight=imread#imread
-* http://docs.opencv.org/2.4/modules/highgui/doc/user_interface.html
-
 #### Examples  
 * [examples/image/](examples/image)
+
+#### Reference:  
+* http://docs.opencv.org/2.4/modules/highgui/doc/reading_and_writing_images_and_video.html?highlight=imread#imread
+* http://docs.opencv.org/2.4/modules/highgui/doc/user_interface.html
 
 ---
