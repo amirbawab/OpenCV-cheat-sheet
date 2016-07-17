@@ -497,5 +497,6 @@ approxPolyDP(Mat(contours[i]), approx_contours[i] /*don't overwrite*/, 3 /*accur
 * http://docs.opencv.org/2.4/modules/imgproc/doc/feature_detection.html?highlight=canny#canny
 * http://docs.opencv.org/2.4/modules/imgproc/doc/structural_analysis_and_shape_descriptors.html
 * http://docs.opencv.org/2.4/doc/tutorials/imgproc/shapedescriptors/find_contours/find_contours.html
+* https://en.wikipedia.org/wiki/Ramer%E2%80%93Douglas%E2%80%93Peucker_algorithm
 
 ---
