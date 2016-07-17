@@ -473,6 +473,11 @@ int thresh = 100;
 Canny(imageSrc, imageDest, thresh /*threshold1*/, thresh*2 /*threshold2*/, 3/*apertureSize*/);
 ```
 
+Draw contours
+```
+drawContours(imageDest, contours, i /*contours[i]*/, Scalar(0, 0, 255) /*color*/, 2/*thickness*/, 8/*type*/, hierarchy, 0, Point());
+```
+
 #### Examples  
 * [examples/contour/](examples/contour)
 
