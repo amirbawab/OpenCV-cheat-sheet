@@ -332,9 +332,11 @@ Grow bright regions within an image
 dilate(imageSrc, imageDest, getStructuringElement(MORPH_ELLIPSE, Size(5, 5)));
 ```
 
-Image moment
+Get center of an object
 ```
 Moments oMoments = moments(imageSrc);
+double x = mmts.m10 / mmts.m00; // center x
+double y = mmts.m01 / mmts.m00; // center y
 ```
 
 #### Examples  
