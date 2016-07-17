@@ -322,12 +322,12 @@ Mark pixels in specified range by value 255 in the destination matrix
 inRange(imageSrc, Scalar(50, 50, 50) /*low*/, Scalar(180, 180, 180) /*high*/, imageDest);
 ```
 
-Causes bright regions within an image to “shrink”
+Shrink bright regions within an image
 ```
 erode(imageSrc, imageDest, getStructuringElement(MORPH_ELLIPSE, Size(5, 5)));
 ```
 
-Causes bright regions within an image to “grow”
+Grow bright regions within an image
 ```
 dilate(imageSrc, imageDest, getStructuringElement(MORPH_ELLIPSE, Size(5, 5)));
 ```
