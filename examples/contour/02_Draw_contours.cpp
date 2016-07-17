@@ -20,10 +20,6 @@ int main( int argc, char** argv ) {
 	// Convert to grayscale
 	cvtColor(imageSrc, imageDest, CV_BGR2GRAY);
 
-	// Detect edges
-	int thresh = 100;
-	Canny( imageDest, imageDest, thresh, thresh*2, 3 );
-
 	// Find contours
 	vector<vector<Point> > contours;
 	vector<Vec4i> hierarchy;
@@ -44,4 +40,5 @@ int main( int argc, char** argv ) {
 
 	return 0;
 }
+
 
