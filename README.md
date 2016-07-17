@@ -490,6 +490,11 @@ Approximates a polygonal curve(s) with the specified precision
 approxPolyDP(Mat(contours[i]), approx_contours[i] /*don't overwrite*/, 3 /*accuracy*/, true /*closed*/);
 ```
 
+Contour area
+```
+contourArea(contour /*vector<Point>*/);
+```
+
 #### Examples  
 * [examples/contour/](examples/contour)
 
