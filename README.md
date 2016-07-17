@@ -16,6 +16,7 @@
   * [Trackbar](#trackbar)
   * [Drawing](#drawing)
   * [Shape and Geometry](#shape-and-geometry)
+  * [Contour](#contour)
 
   
 ### Version
@@ -448,7 +449,7 @@ putText(imageSrc, "Hello world", Point(50, 50), FONT_HERSHEY_PLAIN, 2.5 /*scale*
 
 ### Shape and Geometry
 
-Get center of an object
+Get center of an object (Binary image. Works only if image has one object. Check example)
 ```
 Moments oMoments = moments(imageSrc); // Mat should have 1 channel
 double x = mmts.m10 / mmts.m00; // center x
@@ -462,5 +463,20 @@ double y = mmts.m01 / mmts.m00; // center y
 * http://docs.opencv.org/2.4/modules/imgproc/doc/structural_analysis_and_shape_descriptors.html?highlight=moments#moments
 * https://en.wikipedia.org/wiki/Image_moment
 
+---
+
+### Contour
+
+Finds edges in 1 channel image
+```
+int thresh = 100;
+Canny(imageSrc, imageDest, thresh /*threshold1*/, thresh*2 /*threshold2*/, 3/*apertureSize*/);
+```
+
+#### Examples  
+* [examples/contour/](examples/contour)
+
+#### Reference:  
+* http://docs.opencv.org/2.4/modules/imgproc/doc/feature_detection.html?highlight=canny#canny
 
 ---
