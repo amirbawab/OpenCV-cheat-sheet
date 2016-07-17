@@ -467,10 +467,17 @@ double y = mmts.m01 / mmts.m00; // center y
 
 ### Contour
 
-Finds edges in 1 channel image
+Find and draw edges in 1 channel image
 ```
 int thresh = 100;
 Canny(imageSrc, imageDest, thresh /*threshold1*/, thresh*2 /*threshold2*/, 3/*apertureSize*/);
+```
+
+Find contours in a binary image
+```
+vector<vector<Point> > contours;
+vector<Vec4i> hierarchy;
+findContours(imageSrc, contours, hierarchy, CV_RETR_TREE, CV_CHAIN_APPROX_SIMPLE, Point(0, 0));
 ```
 
 Draw contours
