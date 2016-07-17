@@ -315,6 +315,11 @@ Convert image to grayscale
 cvtColor(imageSrc, imageDest, CV_BGR2GRAY);
 ```
 
+Mark pixels in specified range by value 255 in the destination matrix
+```
+inRange(imageSrc, Scalar(50, 50, 50) /*low*/, Scalar(180, 180, 180) /*high*/, imageDest);
+```
+
 #### Examples  
 * [examples/colors/](examples/colors)
 
