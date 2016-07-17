@@ -408,6 +408,15 @@ Draw rectangle
 rectangle(imageSrc, Point(0, 0) /*top-left*/, Point(imageSrc.rows/2, imageSrc.cols/2) /*bottom-right*/, Scalar(255,0,0) /*color*/, 10 /*thickness*/);
 ```
 
+Draw polylines
+```
+vector<Point> points;
+points.push_back(Point(0, 0));
+points.push_back(Point(50, 50));
+points.push_back(Point(200, 50));
+polylines(imageSrc, points, true /*closed*/, Scalar(255,0,0) /*color*/, 10 /*thickness*/);
+```
+
 Draw text
 ```
 putText(imageSrc, "Hello world", Point(50, 50), FONT_HERSHEY_PLAIN, 2.5 /*scale*/, Scalar(255,0,0) /*color*/, 5 /*thickness*/);
