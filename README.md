@@ -485,6 +485,11 @@ Draw contours
 drawContours(imageDest, contours, i /*contours[i]*/, Scalar(0, 0, 255) /*color*/, 2/*thickness*/, 8/*type*/, hierarchy, 0, Point());
 ```
 
+Approximates a polygonal curve(s) with the specified precision
+```
+approxPolyDP(Mat(contours[i]), approx_contours[i] /*don't overwrite*/, 3 /*accuracy*/, true /*closed*/);
+```
+
 #### Examples  
 * [examples/contour/](examples/contour)
 
