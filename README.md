@@ -398,6 +398,21 @@ Draw line
 line(imageSrc, Point(0, 0) /*from*/, Point(imageSrc.rows/2, imageSrc.cols/2) /*to*/, Scalar(255,0,0) /*color*/, 10 /*thickness*/);
 ```
 
+Draw arrowed line
+```
+arrowedLine(imageSrc, Point(0, 0) /*from*/, Point(imageSrc.rows/2, imageSrc.cols/2) /*to*/, Scalar(255,0,0) /*color*/, 10 /*thickness*/);
+```
+
+Draw rectangle
+```
+rectangle(imageSrc, Point(0, 0) /*top-left*/, Point(imageSrc.rows/2, imageSrc.cols/2) /*bottom-right*/, Scalar(255,0,0) /*color*/, 10 /*thickness*/);
+```
+
+Draw text
+```
+putText(imageSrc, "Hello world", Point(50, 50), FONT_HERSHEY_PLAIN, 2.5 /*scale*/, Scalar(255,0,0) /*color*/, 5 /*thickness*/);
+```
+
 #### Reference:  
 * http://docs.opencv.org/3.0-beta/modules/imgproc/doc/drawing_functions.html
 
