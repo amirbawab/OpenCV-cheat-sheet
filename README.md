@@ -332,6 +332,11 @@ Grow bright regions within an image
 dilate(imageSrc, imageDest, getStructuringElement(MORPH_ELLIPSE, Size(5, 5)));
 ```
 
+Image moment
+```
+Moments oMoments = moments(imageSrc);
+```
+
 #### Examples  
 * [examples/colors/](examples/colors)
 
@@ -340,6 +345,8 @@ dilate(imageSrc, imageDest, getStructuringElement(MORPH_ELLIPSE, Size(5, 5)));
 * http://docs.opencv.org/2.4/doc/tutorials/imgproc/erosion_dilatation/erosion_dilatation.html
 * http://docs.opencv.org/2.4/modules/core/doc/operations_on_arrays.html#inrange
 * http://opencv-srf.blogspot.ca/2010/09/object-detection-using-color-seperation.html
+* http://docs.opencv.org/2.4/modules/imgproc/doc/structural_analysis_and_shape_descriptors.html?highlight=moments#moments
+* https://en.wikipedia.org/wiki/Image_moment
 
 ---
 
