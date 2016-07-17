@@ -448,7 +448,7 @@ putText(imageSrc, "Hello world", Point(50, 50), FONT_HERSHEY_PLAIN, 2.5 /*scale*
 
 ### Shape and Geometry
 
-Get center of an object
+Get center of an object (Binary image. Works only if image has one object. Check example)
 ```
 Moments oMoments = moments(imageSrc); // Mat should have 1 channel
 double x = mmts.m10 / mmts.m00; // center x
