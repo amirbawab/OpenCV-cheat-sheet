@@ -364,6 +364,14 @@ int brightnessValue = 50;
 createTrackbar("Brightness" /*label*/, "My window" /*existing window*/, &brightnessValue, 255 /*max*/);
 ```
 
+Create trackbar with callback function (on change event)
+```
+int brightnessValue = 0;
+createTrackbar("Brightness", "My window 1", &brightnessValue, 255, [](int brightnessValue, void *userData){
+	imshow("My window 1", *(Mat*)userData);
+}, &imageSrc);
+```
+
 #### Examples  
 * [examples/trackbar/](examples/trackbar)
 
