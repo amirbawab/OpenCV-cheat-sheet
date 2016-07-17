@@ -15,7 +15,7 @@
   * [Channles](#channels)
   * [Trackbar](#trackbar)
   * [Drawing](#drawing)
-  * [Shape and Geometry](#shape-and-geometry)
+  * [Geometry](#geometry)
   * [Contour](#contour)
 
   
@@ -447,7 +447,7 @@ putText(imageSrc, "Hello world", Point(50, 50), FONT_HERSHEY_PLAIN, 2.5 /*scale*
 
 ---
 
-### Shape and Geometry
+### Geometry
 
 Get center of an object (Binary image. Works only if image has one object. Check example)
 ```
@@ -457,7 +457,7 @@ double y = mmts.m01 / mmts.m00; // center y
 ```
 
 #### Examples  
-* [examples/shape_and_geometry/](examples/shape_and_geometry)
+* [examples/geometry/](examples/geometry)
 
 #### Reference:  
 * http://docs.opencv.org/2.4/modules/imgproc/doc/structural_analysis_and_shape_descriptors.html?highlight=moments#moments
