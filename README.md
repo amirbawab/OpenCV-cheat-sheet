@@ -13,6 +13,7 @@
   * [Contrast and Brightness](#contrast-and-brightness)
   * [Colors](#colors)
   * [Channles](#channels)
+  * [Trackbar](#trackbar)
 
   
 ### Version
@@ -352,5 +353,21 @@ merge(bgr /*vector<Mat> bgr*/, imageDest);
 
 #### Reference:  
 * http://docs.opencv.org/2.4/modules/core/doc/operations_on_arrays.html
+
+---
+
+### Trackbar
+
+Create trackbar (min=0 always)
+```
+int brightnessValue = 50;
+createTrackbar("Brightness" /*label*/, "My window" /*existing window*/, &brightnessValue, 255 /*max*/);
+```
+
+#### Examples  
+* [examples/trackbar/](examples/trackbar)
+
+#### Reference:  
+* http://docs.opencv.org/2.4/modules/highgui/doc/user_interface.html?highlight=createtrackbar#createtrackbar
 
 ---
