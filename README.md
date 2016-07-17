@@ -15,6 +15,7 @@
   * [Channles](#channels)
   * [Trackbar](#trackbar)
   * [Drawing](#drawing)
+  * [Object](#object)
 
   
 ### Version
@@ -332,13 +333,6 @@ Grow bright regions within an image
 dilate(imageSrc, imageDest, getStructuringElement(MORPH_ELLIPSE, Size(5, 5)));
 ```
 
-Get center of an object
-```
-Moments oMoments = moments(imageSrc);
-double x = mmts.m10 / mmts.m00; // center x
-double y = mmts.m01 / mmts.m00; // center y
-```
-
 #### Examples  
 * [examples/colors/](examples/colors)
 
@@ -347,8 +341,6 @@ double y = mmts.m01 / mmts.m00; // center y
 * http://docs.opencv.org/2.4/doc/tutorials/imgproc/erosion_dilatation/erosion_dilatation.html
 * http://docs.opencv.org/2.4/modules/core/doc/operations_on_arrays.html#inrange
 * http://opencv-srf.blogspot.ca/2010/09/object-detection-using-color-seperation.html
-* http://docs.opencv.org/2.4/modules/imgproc/doc/structural_analysis_and_shape_descriptors.html?highlight=moments#moments
-* https://en.wikipedia.org/wiki/Image_moment
 
 ---
 
@@ -446,5 +438,26 @@ putText(imageSrc, "Hello world", Point(50, 50), FONT_HERSHEY_PLAIN, 2.5 /*scale*
 
 #### Reference:  
 * http://docs.opencv.org/2.4/modules/core/doc/drawing_functions.html
+
+---
+
+### Object
+
+#### One object
+
+Get center of an object
+```
+Moments oMoments = moments(imageSrc); // Mat should have 1 channel
+double x = mmts.m10 / mmts.m00; // center x
+double y = mmts.m01 / mmts.m00; // center y
+```
+
+#### Examples  
+* [examples/object/](examples/object)
+
+#### Reference:  
+* http://opencv-srf.blogspot.ca/2010/09/object-detection-using-color-seperation.html
+* http://docs.opencv.org/2.4/modules/imgproc/doc/structural_analysis_and_shape_descriptors.html?highlight=moments#moments
+* https://en.wikipedia.org/wiki/Image_moment
 
 ---
