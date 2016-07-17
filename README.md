@@ -14,6 +14,7 @@
   * [Colors](#colors)
   * [Channles](#channels)
   * [Trackbar](#trackbar)
+  * [Drawing](#drawing)
 
   
 ### Version
@@ -377,5 +378,14 @@ createTrackbar("Brightness", "My window 1", &brightnessValue, 255, [](int bright
 
 #### Reference:  
 * http://docs.opencv.org/2.4/modules/highgui/doc/user_interface.html?highlight=createtrackbar#createtrackbar
+
+---
+
+### Drawing
+
+Draw circle
+```
+circle(imageSrc, Point(imageSrc.rows/2, imageSrc.cols/2) /*circle center*/, 100 /*radius*/, Scalar(255, 0, 0) /*color*/, 10/*thickness*/);
+```
 
 ---
