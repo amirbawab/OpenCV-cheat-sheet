@@ -338,6 +338,7 @@ dilate(imageSrc, imageDest, getStructuringElement(MORPH_ELLIPSE, Size(5, 5)));
 #### Reference:  
 * http://docs.opencv.org/2.4/modules/imgproc/doc/miscellaneous_transformations.html#cvtcolor
 * http://docs.opencv.org/2.4/doc/tutorials/imgproc/erosion_dilatation/erosion_dilatation.html
+* http://opencv-srf.blogspot.ca/2010/09/object-detection-using-color-seperation.html
 
 ---
 
