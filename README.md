@@ -393,6 +393,11 @@ Draw ellipse
 ellipse(imageSrc, Point(imageSrc.rows/2, imageSrc.cols/2) /*ellipse center*/, Size(100, 50) /*min-max radius*/, 40 /*ellipse angle*/, 0 /*start angle*/, 359 /*end angle*/, Scalar(255,0,0) /*color*/, 10 /*thickness*/);
 ```
 
+Draw line
+```
+line(imageSrc, Point(0, 0) /*from*/, Point(imageSrc.rows/2, imageSrc.cols/2) /*to*/, Scalar(255,0,0) /*color*/, 10 /*thickness*/);
+```
+
 #### Reference:  
 * http://docs.opencv.org/3.0-beta/modules/imgproc/doc/drawing_functions.html
 
