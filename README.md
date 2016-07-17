@@ -322,11 +322,22 @@ Mark pixels in specified range by value 255 in the destination matrix
 inRange(imageSrc, Scalar(50, 50, 50) /*low*/, Scalar(180, 180, 180) /*high*/, imageDest);
 ```
 
+Causes bright regions within an image to “shrink”
+```
+erode(imageSrc, imageDest, getStructuringElement(MORPH_ELLIPSE, Size(5, 5)));
+```
+
+Causes bright regions within an image to “grow”
+```
+dilate(imageSrc, imageDest, getStructuringElement(MORPH_ELLIPSE, Size(5, 5)));
+```
+
 #### Examples  
 * [examples/colors/](examples/colors)
 
 #### Reference:  
 * http://docs.opencv.org/2.4/modules/imgproc/doc/miscellaneous_transformations.html#cvtcolor
+* http://docs.opencv.org/2.4/doc/tutorials/imgproc/erosion_dilatation/erosion_dilatation.html
 
 ---
 
