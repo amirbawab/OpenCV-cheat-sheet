@@ -15,6 +15,7 @@
   * [Channles](#channels)
   * [Trackbar](#trackbar)
   * [Drawing](#drawing)
+  * [Shape and Geometry](#shape-and-geometry)
 
   
 ### Version
