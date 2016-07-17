@@ -423,6 +423,6 @@ putText(imageSrc, "Hello world", Point(50, 50), FONT_HERSHEY_PLAIN, 2.5 /*scale*
 ```
 
 #### Reference:  
-* http://docs.opencv.org/3.0-beta/modules/imgproc/doc/drawing_functions.html
+* http://docs.opencv.org/2.4/modules/core/doc/drawing_functions.html#circle
 
 ---
