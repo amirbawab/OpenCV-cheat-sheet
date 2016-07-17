@@ -474,7 +474,7 @@ Canny(imageSrc, imageDest, thresh /*threshold1*/, thresh*2 /*threshold2*/, 3/*ap
 ```
 
 Find contours in a binary image  
-*Note: Shape must be white solid, otherwise it will count it as more than one contour*
+*Note: Shape must be filled in white color, otherwise it will count it as more than one contour*
 ```
 vector<vector<Point> > contours;
 vector<Vec4i> hierarchy;
