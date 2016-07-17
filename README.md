@@ -496,6 +496,20 @@ Contour area
 contourArea(contour /*vector<Point>*/);
 ```
 
+Draw rectangle around contour
+```
+Rect rect = boundingRect(Mat(contours[i]));
+rectangle(tmpImage, rect.tl(), rect.br(), Scalar(0,255,0), 2);
+```
+
+Draw circle around contour
+```
+Point2f center;
+float radius;
+minEnclosingCircle(contours[i], center, radius);
+circle( tmpImage, center, radius, Scalar(255, 0, 0), 2/*thickness*/);
+```
+
 #### Examples  
 * [examples/contour/](examples/contour)
 
