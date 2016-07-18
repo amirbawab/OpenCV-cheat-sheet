@@ -474,12 +474,18 @@ Canny(imageSrc, imageDest, thresh /*threshold1*/, thresh*2 /*threshold2*/, 3/*ap
 ```
 
 Find contours in a binary image  
-*Note: Shape must be filled in white color, otherwise it will count it as more than one contour*
+*Note: Shape must be filled in white color, otherwise it will count it as more than one contour*  
 ```
 vector<vector<Point> > contours;
 vector<Vec4i> hierarchy;
 findContours(imageSrc, contours, hierarchy, CV_RETR_TREE, CV_CHAIN_APPROX_SIMPLE, Point(0, 0));
 ```
+Parameter: mode  
+* CV_RETR_EXTERNAL retrieves only the extreme outer contours.
+* CV_RETR_LIST retrieves all of the contours without establishing any hierarchical relationships.
+* CV_RETR_CCOMP retrieves all of the contours and organizes them into a two-level hierarchy. 
+* CV_RETR_TREE retrieves all of the contours and reconstructs a full hierarchy of nested contours.
+
 
 Draw contours
 ```
