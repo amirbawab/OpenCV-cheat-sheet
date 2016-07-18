@@ -458,6 +458,7 @@ double y = mmts.m01 / mmts.m00; // center y
 
 #### Examples  
 * [examples/geometry/](examples/geometry)
+* [examples/contour/06_Multi_contour_center.cpp](examples/contour/06_Multi_contour_center.cpp)
 
 #### Reference:  
 * http://docs.opencv.org/2.4/modules/imgproc/doc/structural_analysis_and_shape_descriptors.html?highlight=moments#moments
