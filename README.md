@@ -449,9 +449,10 @@ putText(imageSrc, "Hello world", Point(50, 50), FONT_HERSHEY_PLAIN, 2.5 /*scale*
 
 ### Geometry
 
-Get center of an object (Binary image. Works only if image has one object. Check example)
+Get center of a Binary matrix or contour
 ```
 Moments oMoments = moments(imageSrc); // Mat should have 1 channel
+// Moments oMoments = moments(contour /*vector<Point>*/);
 double x = mmts.m10 / mmts.m00; // center x
 double y = mmts.m01 / mmts.m00; // center y
 ```
