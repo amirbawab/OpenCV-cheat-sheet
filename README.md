@@ -17,7 +17,7 @@
   * [Drawing](#drawing)
   * [Geometry](#geometry)
   * [Contour](#contour)
-
+  * [Contributing](#contributing)
   
 ### Version
 * OpenCV 2.4
@@ -528,3 +528,12 @@ circle( tmpImage, center, radius, Scalar(255, 0, 0), 2/*thickness*/);
 * https://en.wikipedia.org/wiki/Ramer%E2%80%93Douglas%E2%80%93Peucker_algorithm
 
 ---
+
+### Contributing
+
+* Edit README.md
+* Add your changes
+* Write description of your changes in the `Commit changes` form
+* Select the radio button "Create a new branch for this commit and start a pull request."
+* Specify a name for your commit branch
+* Click on "Propose file change" and then on "Create pull request"
