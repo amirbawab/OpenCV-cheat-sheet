@@ -78,6 +78,7 @@ opencv_video
 opencv_features2d
 opencv_calib3d
 opencv_objdetect
+opencv_imgcodecs
 opencv_contrib
 opencv_legacy
 opencv_flann
